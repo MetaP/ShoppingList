@@ -1,0 +1,11 @@
+﻿<div class="list">
+    @if (!string.IsNullOrWhiteSpace(List.Title))
+    {
+        <div class="title">@List.Title</div>
+        <hr/>
+    }
+    @foreach (var item in List.Items)
+    {
+        <div class="item">@item.Caption</div>
+    }
+</div>
