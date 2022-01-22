@@ -8,7 +8,7 @@ namespace MetaP.ShoppingList
         public Task<List> GetShoppingList()
         {
             // ToDo: Implement ShoppingListProvider.GetShoppingList()
-            List list = new List("Delhaize");
+            List list = new("Delhaize");
             list.Add("Tio Pepe");
             list.Add("Romeinse salade");
 

@@ -23,6 +23,6 @@ namespace MetaP.ShoppingList.Model
             _items.Add(new ListItem(caption));
         }
 
-        private IList<ListItem> _items;
+        private readonly IList<ListItem> _items;
     }
 }
