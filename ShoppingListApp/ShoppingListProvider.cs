@@ -8,15 +8,11 @@ namespace MetaP.ShoppingList
         public Task<List> GetShoppingList()
         {
             // ToDo: Implement ShoppingListProvider.GetShoppingList()
-            List list =  new List()
-            {
-                Title = "Delhaize",
-                Items = new ListItem[]
-                {
-                    new ListItem { Caption = "Tio Pepe"},
-                    new ListItem { Caption = "Romeinse salade"}
-                }
-            };
+            List list = new List("Delhaize");
+            list.Add("Tio Pepe");
+            list.Add("Romeinse salade");
+
+            list.Items[1].CheckedOff = true;
 
             // Return the list asynchronously (as if it was provided by an on-line service)
             return Task<List>.FromResult(list);

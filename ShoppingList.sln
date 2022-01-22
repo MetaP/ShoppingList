@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingListApp", "ShoppingListApp\ShoppingListApp.csproj", "{C0B20B95-6CB8-4082-8CB4-FB3F84CE7DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingList.Model", "ShoppingList.Model\ShoppingList.Model.csproj", "{E0A6460E-1A95-4529-8117-B92D1F1B6234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingList.Model", "ShoppingList.Model\ShoppingList.Model.csproj", "{E0A6460E-1A95-4529-8117-B92D1F1B6234}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{EED0B9D6-4BA5-4F3C-BFD7-328F522BE054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingList.Model.Test", "Test\ShoppingList.Model.Test\ShoppingList.Model.Test.csproj", "{F3A58F36-7E41-4F33-ABCC-C89C9435B1E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{E0A6460E-1A95-4529-8117-B92D1F1B6234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0A6460E-1A95-4529-8117-B92D1F1B6234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0A6460E-1A95-4529-8117-B92D1F1B6234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A58F36-7E41-4F33-ABCC-C89C9435B1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A58F36-7E41-4F33-ABCC-C89C9435B1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A58F36-7E41-4F33-ABCC-C89C9435B1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A58F36-7E41-4F33-ABCC-C89C9435B1E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3A58F36-7E41-4F33-ABCC-C89C9435B1E8} = {EED0B9D6-4BA5-4F3C-BFD7-328F522BE054}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0393D0AB-03B8-48C3-AE09-FB073DDD49AD}

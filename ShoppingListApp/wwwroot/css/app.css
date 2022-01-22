@@ -33,6 +33,7 @@ a, .btn-link {
 /* Styling of ListView component (since "CSS isolation" fails) */
 
 
+/* ListItem.css */
 div.list {
     display: inline-block; /* Make div as large as its content */
     padding: 6px;
@@ -45,8 +46,14 @@ div.title {
     color: red;
 }
 
-div.item {
+/* ListItemView.css */
+div.list-item {
     color: blue;
+}
+
+div.list-item.checked-off {
+    text-decoration: line-through;
+    color: gray;
 }
 
 /* End ListView component styling */

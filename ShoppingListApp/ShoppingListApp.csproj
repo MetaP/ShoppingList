@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
     <AssemblyName>MetaP.ShoppingList.App</AssemblyName>
     <RootNamespace>MetaP.ShoppingList</RootNamespace>
   </PropertyGroup>
