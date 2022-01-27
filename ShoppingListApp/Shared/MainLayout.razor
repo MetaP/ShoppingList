@@ -1,14 +1,21 @@
 @inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
+    <NavLink class="nav-link" href="" Match="NavLinkMatch.All" style="display: inline-block">
+        <span class="oi oi-menu" aria-hidden="true"></span> List
+    </NavLink>
+    <NavLink class="nav-link" href="about" Match="NavLinkMatch.All" style="display: inline-block">
+        <span class="oi oi-people" aria-hidden="true"></span> About
+    </NavLink>
+    <hr/>
+    @*<div class="sidebar">
         <NavMenu />
-    </div>
+    </div>*@
 
     <div class="main">
         @*<div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>*@
+                <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+            </div>*@
 
         <div class="content px-4">
             @Body

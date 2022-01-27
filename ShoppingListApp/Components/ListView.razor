@@ -1,9 +1,9 @@
-﻿<div class="list">
+﻿<div class="metap-list">
     @if (List.Title.Length > 0)
     {
-        <div id="Title" class="title">@List.Title</div>
+        <div class="metap-title">@List.Title</div>
     }
-    <input id="NewCaption" type="text" @bind="NewCaption" @onkeyup="OnKeyUp_NewCaption"/>
+    <input class="metap-new-caption" type="text" @bind="NewCaption" @onkeyup="OnKeyUp_NewCaption"/>
     @foreach (ListItem item in List.Items)
     {
         <ListItemView ListItem="item" />

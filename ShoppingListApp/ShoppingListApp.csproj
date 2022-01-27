@@ -8,19 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\css\app.css" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Components\ListView.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Components\ListView.razor.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\css\app.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +23,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ShoppingList.Model\ShoppingList.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\app.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
