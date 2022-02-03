@@ -1,11 +1,28 @@
-﻿<div class="metap-list">
+﻿@using MetaP.ShoppingList.Components
+
+<div class="metap-list">
     @if (List.Title.Length > 0)
     {
         <div class="metap-title">@List.Title</div>
     }
-    <input class="metap-new-caption" type="text" @bind="NewCaption" @onkeyup="OnKeyUp_NewCaption"/>
+
+    @*** Standard behaviour of dragenter and dragover events must be disabled for drop to work. (see comment in code behind) ***@
+
+    <input class="metap-edit-caption" type="text" @bind-value="EditedItem.Caption" 
+        @onkeyup="OnKeyUp_EditCaption"
+        ondragenter="event.preventDefault()"
+        ondragover="event.preventDefault()"
+        @ondrop="HandleDropOnEdit"
+    />
+    <div class="metap-delete"
+        ondragenter="event.preventDefault()"
+        ondragover="event.preventDefault()"
+        @ondrop="HandleDropOnDelete"
+    >
+        <span class="iconify-inline" data-icon="ep:delete" style="color: red;" data-width="20"/>
+    </div>
     @foreach (ListItem item in List.Items)
     {
-        <ListItemView ListItem="item" />
+        <ListItemView ListItem=@item OnDragItemStart=@HandleOnDragItemStart/>
     }
 </div>

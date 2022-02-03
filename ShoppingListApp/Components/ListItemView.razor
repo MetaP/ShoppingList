@@ -1,4 +1,8 @@
 ﻿<div class="metap-list-item">
-    <input class="metep-check-off" type="checkbox" @bind="ListItem.CheckedOff"/>
-    <div class="metap-caption@(ListItem.CheckedOff ? " metap-checked-off" : "")" @ondblclick="ToggleCheckOff">@ListItem.Caption</div>
+    <input class="metep-check-off" type="checkbox" @bind="ListItem.CheckedOff" />
+    @*@ondblclick="ToggleCheckOff"*@
+    <div class="metap-caption@(ListItem.CheckedOff ? " metap-checked-off" : "")"
+            draggable="true"
+            @ondragstart="HandleDragEnter"
+    >@ListItem.Caption</div>
 </div>

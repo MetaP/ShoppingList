@@ -20,7 +20,18 @@ namespace MetaP.ShoppingList.Model
         /// <param name="caption"></param>
         public void Add(string caption)
         {
-            _items.Add(new ListItem(caption));
+            Add(new ListItem(caption));
+        }
+
+        public void Add(ListItem item)
+        {
+            _items.Add(item);
+            item.List = this;
+        }
+
+        public void Remove(ListItem item)
+        {
+            _items.Remove(item);
         }
 
         private readonly IList<ListItem> _items;

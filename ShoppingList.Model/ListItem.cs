@@ -12,6 +12,8 @@
             CheckedOff = checkedOff;
         }
 
+        public List? List { get; set; }
+
         public string Caption { get; set; }
 
         /// <summary>Indicates whether this item has been checked off the list or not.</summary>
