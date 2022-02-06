@@ -1,4 +1,6 @@
-﻿namespace MetaP.ShoppingList.Model
+﻿using System.Text.Json.Serialization;
+
+namespace MetaP.ShoppingList.Model
 {
     public class ListItem
     {
@@ -12,6 +14,7 @@
             CheckedOff = checkedOff;
         }
 
+        [JsonIgnore]
         public List? List { get; set; }
 
         public string Caption { get; set; }

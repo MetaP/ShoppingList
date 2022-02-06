@@ -1,4 +1,5 @@
 ﻿using MetaP.ShoppingList.Model;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MetaP.ShoppingList
@@ -12,7 +13,7 @@ namespace MetaP.ShoppingList
             list.Add("Tio Pepe");
             list.Add("Romeinse salade");
 
-            list.Items[1].CheckedOff = true;
+            list.Items.First().CheckedOff = true;
 
             // Return the list asynchronously (as if it was provided by an on-line service)
             return Task<List>.FromResult(list);
