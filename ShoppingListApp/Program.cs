@@ -1,8 +1,10 @@
+using MetaP.ShoppingList.Model;
+using MetaP.ShoppingList.Services;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace MetaP.ShoppingList
 {
@@ -15,7 +17,7 @@ namespace MetaP.ShoppingList
 
             IServiceCollection services = builder.Services;
             services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            services.AddSingleton<ShoppingListProvider>(new ShoppingListProvider());
+            services.AddScoped<IListService, HttpListService>();
 
             await builder.Build().RunAsync();
         }

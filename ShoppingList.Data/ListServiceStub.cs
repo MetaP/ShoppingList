@@ -16,7 +16,7 @@ namespace MetaP.ShoppingList
 
         public async Task Save(List list)
         {
-            //throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
     }
 }

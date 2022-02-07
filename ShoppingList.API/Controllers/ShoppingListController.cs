@@ -1,16 +1,13 @@
 ﻿using MetaP.ShoppingList.Model;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MetaP.ShoppingList.Controllers
 {
-    [Route("api/list")]
     [ApiController]
+    [Route("api/list")]
     public class ShoppingListController : ControllerBase
     {
         public ShoppingListController(IListService listService)
