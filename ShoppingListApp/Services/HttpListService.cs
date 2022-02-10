@@ -13,7 +13,11 @@ namespace MetaP.ShoppingList.Services
         public HttpListService(HttpClient http)
         {
             Http = http;
+#if DEBUG
             http.BaseAddress = new Uri("https://localhost:44354/api/list/");
+#else
+            http.BaseAddress = new Uri("https://metap-shopping-list-api.azurewebsites.net/api/list/");
+#endif
         }
 
         public async Task<List> Get(string name)
